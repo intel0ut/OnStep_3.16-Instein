@@ -39,19 +39,22 @@ Discussion, Questions, ...etc
   https://groups.io/g/onstep
 
 
- -THIS FIRMWARE IS ONLY VALID FOR INSTEIN ESP32 DRIVES PURCHASED FROM SEPTEMBER 6 2020, ALL DRIVES FROM THIS DATE ONWARDS HAS TMC5160 S.DRIVERS INSTALLED
- -TO USE THIS FIRMWARE THE FOLLOWING ARDUINO SOFTWARE, BOARDS AND LIBRARIES MUST BE INSTALLED, VERSION NUMBERS MUST MATCH.
+ - THIS FIRMWARE IS ONLY VALID FOR INSTEIN ESP32 DRIVES PURCHASED FROM SEPTEMBER 6 2020, ALL DRIVES FROM THIS DATE ONWARDS HAS TMC5160 S.DRIVERS INSTALLED
+ 
+ - TO USE THIS FIRMWARE THE FOLLOWING ARDUINO SOFTWARE, BOARDS AND LIBRARIES MUST BE INSTALLED, VERSION NUMBERS MUST MATCH.
      Arduino IDE 1.8.5 Software
      Esp32 by Espressif Systems v1.0.1 Board (required for main firmware)
      Esp8266 by ESP8266 Community v2.4.2 Board (required for built-in wifi firmware)
      U8G2 by Oliver v2.28.6 Library (required only for SmartHandController)
      Ephemeris by Marscaper (single version library, required only for SmartHandController)
- -ADITIONALLY YOU MUST MADE A CHANGE on your HardwareSerial.ccp file code lines 10 & 14, this file is usually located on: 
+     
+ - ADITIONALLY YOU MUST MADE A CHANGE on your HardwareSerial.ccp file code lines 10 & 14, this file is usually located on: 
      C:\Users\xxxx\AppData\Local\Arduino15\packages\esp32\hardware\esp32\1.0.1\cores\esp32\HardwareSerial.ccp
      Change the lines "#define RX1 9" & "#define TX1 10" by "#define RX1 21" & "#define TX1 22" respectively.
      This change is mandatory for this firmware to work and in this way, OnStep AUX port will work as second serial port an enable
-     a set of conectivity options: aditional wifi, bluetooth or USB, RF Link, ethernet or future serial devices.     
- -THIS IS MAIN MCU FIRMWARE FOR ESP32 INSTEIN ONSTEP DRIVES, FOR WIFI AND SMARTHANDCONTROLLER FIRMWARE EDITING OPEN:
+     a set of conectivity options: aditional wifi, bluetooth or USB, RF Link, ethernet or future serial devices. 
+     
+ - THIS IS MAIN MCU FIRMWARE FOR ESP32 INSTEIN ONSTEP DRIVES, FOR WIFI AND SMARTHANDCONTROLLER FIRMWARE EDITING OPEN:
      WiFi firmware: addons/WiFi-Bluetooth/WiFi-Bluetooth.ino -> set your preferences in Config.h tab
      SmartHandController firmware: addons/St4Serial/SmartHandController/SmartHandController.ino -> set your preferences in Config.h tab
      If all above steps are well done this firmware with its defaults settings should compile and work ok, if not, you may need to make
