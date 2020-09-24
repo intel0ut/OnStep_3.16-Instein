@@ -1,5 +1,5 @@
 # OnStep-Instein
-This repository is intended for owners of OnStep boxes made by Instein.eu and contain a copy of the custom OnStep 3.16o for ESP32 source code used by the box. I don't own any part of this code. Original source code by Howard Hutton (https://github.com/hjd1964/OnStep) with modifications by Instein.eu
+This repository is intended for owners of OnStep boxes made by Instein.eu and contain a copy of the custom OnStep 3.16o for ESP32 source code used by the box. I don't own any part of this code. Original source code by Howard Dutton (https://github.com/hjd1964/OnStep) with modifications by Instein.eu
 
 
 # OnStep by Howard Dutton
@@ -46,7 +46,7 @@ Discussion, Questions, ...etc
      Esp8266 by ESP8266 Community v2.4.2 Board (required for built-in wifi firmware)
      U8G2 by Oliver v2.28.6 Library (required only for SmartHandController)
      Ephemeris by Marscaper (single version library, required only for SmartHandController)
- - ADITIONALLY YOU MUST MADE A CHANGE on your HardwareSerial.ccp file code lines 10 & 14, this file is usually located on: 
+ -ADITIONALLY YOU MUST MADE A CHANGE on your HardwareSerial.ccp file code lines 10 & 14, this file is usually located on: 
      C:\Users\xxxx\AppData\Local\Arduino15\packages\esp32\hardware\esp32\1.0.1\cores\esp32\HardwareSerial.ccp
      Change the lines "#define RX1 9" & "#define TX1 10" by "#define RX1 21" & "#define TX1 22" respectively.
      This change is mandatory for this firmware to work and in this way, OnStep AUX port will work as second serial port an enable
